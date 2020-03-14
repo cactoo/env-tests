@@ -31,28 +31,30 @@ const VARS = [
 ]
 
 const IndexPage = () => (
-  <section style={{ display: "flex", justifyContent: "space-between" }}>
-    <div>
-      <h2>ENV VARIABLES:</h2>
-      <ul>
-        {VARS.map(v => (
-          <li key={v}>
-            {v}: <code>{process.env[v]}</code>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div>
-      <h2>GATSBY_ PREFIXED VARIABLES:</h2>
-      <ul>
-        {VARS.map(v => (
-          <li key={v}>
-            {v}: <code>{process.env[`GATSBY_${v}`]}</code>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+  <Layout>
+    <section style={{ display: "flex", justifyContent: "space-between" }}>
+      <div>
+        <h2>ENV VARIABLES:</h2>
+        <ul>
+          {VARS.map(v => (
+            <li key={v}>
+              {v}: <code>{process.env[v]}</code>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>GATSBY_ PREFIXED VARIABLES:</h2>
+        <ul>
+          {VARS.map(v => (
+            <li key={v}>
+              {v}: <code>{process.env[`GATSBY_${v}`]}</code>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  </Layout>
 )
 
 export default IndexPage
