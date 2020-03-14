@@ -5,31 +5,6 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const VARS = [
-  "NODE_ENV",
-  "GATSBY_NODE_ENV",
-
-  // BUILD METADATA
-  "NETLIFY",
-  "BUILD_ID",
-  "CONTEXT",
-
-  // GIT METADATA
-  "REPOSITORY_URL",
-  "BRANCH",
-  "HEAD",
-  "COMMIT_REF",
-  "CACHED_COMMIT_REF",
-  "PULL_REQUEST",
-  "REVIEW_ID",
-
-  // DEPLOY URLS
-  "URL",
-  "DEPLOY_URL",
-  "DEPLOY_PRIME_URL",
-  "DEPLOY_ID",
-]
-
 const IndexPage = () => (
   <Layout>
     <section style={{ display: "flex", justifyContent: "space-between" }}>
