@@ -24,6 +24,32 @@ module.exports = {
     DEPLOY_ID: process.env.DEPLOY_ID || "-",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: [
+          // BUILD METADATA
+          "NETLIFY",
+          "BUILD_ID",
+          "CONTEXT",
+
+          // GIT METADATA
+          "REPOSITORY_URL",
+          "BRANCH",
+          "HEAD",
+          "COMMIT_REF",
+          "CACHED_COMMIT_REF",
+          "PULL_REQUEST",
+          "REVIEW_ID",
+
+          // DEPLOY URLS
+          "URL",
+          "DEPLOY_URL",
+          "DEPLOY_PRIME_URL",
+          "DEPLOY_ID",
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
