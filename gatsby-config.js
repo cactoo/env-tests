@@ -1,8 +1,26 @@
+// console.log("ENV", process.env)
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    NETLIFY: process.env.NETLIFY,
+    BUILD_ID: process.env.BUILD_ID,
+    CONTEXT: process.env.CONTEXT,
+    // GIT METADATA
+    REPOSITORY_URL: process.env.REPOSITORY_URL,
+    BRANCH: process.env.BRANCH,
+    HEAD: process.env.HEAD,
+    COMMIT_REF: process.env.COMMIT_REF,
+    CACHED_COMMIT_REF: process.env.CACHED_COMMIT_REF,
+    PULL_REQUEST: process.env.PULL_REQUEST,
+    REVIEW_ID: process.env.REVIEW_ID,
+    // DEPLOY URLS
+    URL: process.env.URL,
+    DEPLOY_URL: process.env.DEPLOY_URL,
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL,
+    DEPLOY_ID: process.env.DEPLOY_ID,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

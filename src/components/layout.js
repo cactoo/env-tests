@@ -18,10 +18,25 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          NETLIFY
+          BUILD_ID
+          CONTEXT
+          REPOSITORY_URL
+          BRANCH
+          HEAD
+          COMMIT_REF
+          CACHED_COMMIT_REF
+          PULL_REQUEST
+          REVIEW_ID
+          URL
+          DEPLOY_URL
+          DEPLOY_PRIME_URL
+          DEPLOY_ID
         }
       }
     }
   `)
+  console.log("LAYOUT", data.site.siteMetadata)
 
   return (
     <>
